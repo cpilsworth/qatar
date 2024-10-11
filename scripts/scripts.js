@@ -48,10 +48,27 @@ async function loadFonts() {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
+    updateDestinationTitle(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
   }
+}
+
+function updateDestinationTitle(main) {
+  const template = document.querySelector('meta[name="template"]').content;
+  if (template !== 'destination') return;
+
+  const origin = document.querySelector('meta[name="origin"]').content;
+  const destination = document.querySelector('meta[name="destination"]').content;
+  let title = document.querySelector('h1');
+  if (!title) return;
+
+  let titleText = title.textContent;
+  titleText = titleText.replace('{origin}', origin);
+  titleText = titleText.replace('{destination}', destination);
+  
+  title.textContent = titleText;
 }
 
 /**
@@ -66,6 +83,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  
 }
 
 /**
