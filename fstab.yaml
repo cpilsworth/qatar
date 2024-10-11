@@ -3,4 +3,4 @@ mountpoints:
 
 
 folders:
-  /en-gb/destinations: /en-gb/destination
+  /en-gb/destinations: /en-gb/destinations/default
