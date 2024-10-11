@@ -3,4 +3,4 @@ mountpoints:
 
 
 folders:
-  /destinations/flights-to-: /destination
+  /destinations/flights-to: /destination
