@@ -1,3 +1,5 @@
 mountpoints:
   /: https://adobe-my.sharepoint.com/:f:/r/personal/chrisp_adobe_com/Documents/hlxsites/qatar
-  /en-gb/destinations: https://byo-html.diffa.co.uk/main--qatar--cpilsworth.hlx.page
+  /en-gb/destinations: 
+    url: https://byo-html.diffa.co.uk/main--qatar--cpilsworth.hlx.page
+    type: markup
